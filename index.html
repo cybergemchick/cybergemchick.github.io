@@ -349,11 +349,11 @@ body::before{
   </div>
   <div class="hero-stats">
     <div class="stat-item">
-      <div class="stat-num">8</div>
+      <div class="stat-num">9</div>
       <div class="stat-label">Tools Built</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">14</div>
+      <div class="stat-num">22</div>
       <div class="stat-label">Incidents Tracked</div>
     </div>
     <div class="stat-item">
@@ -389,8 +389,10 @@ body::before{
     <div class="recon-block" data-label="Current Status">
       <ul>
         <li><span class="pulse"></span>Completing AI Red Team certification</li>
-        <li><span class="pulse"></span>Active lab work — adversarial prompting</li>
-        <li><span class="pulse"></span>Open to AI security roles</li>
+        <li><span class="pulse"></span>CASP+ &amp; CEH certified (DoD 8570/8140 compliant)
+		 Active lab work — adversarial prompting</li>
+        <li><span class="pulse"></span>CompTIA SecAI+ certified (CY0-001)
+		 Open to AI security roles</li>
       </ul>
     </div>
     <div class="recon-block" data-label="Target Sectors">
@@ -586,12 +588,12 @@ body::before{
         <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Python · JSON</div>
       </div>
       <div class="finding-title"><a href="https://github.com/cybergemchick/ai-threat-intel" target="_blank">AI Security Incident Tracker</a></div>
-      <div class="finding-desc">MITRE ATLAS-mapped database of 14 publicly documented AI security incidents — prompt injection, model theft, training data extraction, deepfake fraud, and bias cases. CLI viewer with filter, search, and markdown export.</div>
+      <div class="finding-desc">MITRE ATLAS-mapped database of 22 publicly documented AI security incidents — prompt injection, model theft, training data extraction, deepfake fraud, and bias cases. CLI viewer with filter, search, and markdown export.</div>
       <div class="finding-stack">
         <div class="stack-label">Stack</div>
         <div class="stack-items"><span class="stack-item">Python</span><span class="stack-item">JSON</span><span class="stack-item">MITRE ATLAS</span></div>
       </div>
-      <div class="finding-tags"><span class="tag">Threat Intelligence</span><span class="tag">ATLAS Mapped</span><span class="tag">14 Incidents</span></div>
+      <div class="finding-tags"><span class="tag">Threat Intelligence</span><span class="tag">ATLAS Mapped</span><span class="tag">22 Incidents</span></div>
     </div>
 
     <div class="finding">
@@ -626,7 +628,39 @@ body::before{
 
     <div class="finding">
       <div class="finding-meta">
-        <div class="finding-id">FIND-009</div>
+        
+            <!-- FIND-010 -->
+            <div class="find-card find-complete">
+                <div class="find-header">
+                    <div class="find-id">FIND-010</div>
+                    <div class="find-status complete">COMPLETE</div>
+                    <div class="find-lang">Python &middot; CLI</div>
+                </div>
+                <div class="find-title">AI Abuse Classifier</div>
+                <div class="find-desc">
+                    Prompt classification tool for detecting AI misuse in cyber operations.
+                    Uses an LLM-as-judge pattern to assign harm categories (MALWARE_DEV,
+                    EXPLOIT_DEV, CYBERATTACK_OPS, POLICY_BYPASS, DUAL_USE_AMBIG) and maps
+                    each finding to OWASP LLM Top 10 and MITRE ATLAS techniques.
+                    Outputs enforcement action recommendations for safeguards pipelines.
+                    Built specifically to demonstrate safeguards enforcement logic at scale.
+                </div>
+                <div class="find-stack-label">STACK</div>
+                <div class="find-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Anthropic API</span>
+                    <span class="tag">Claude Haiku</span>
+                    <span class="tag">OWASP LLM Top 10</span>
+                    <span class="tag">MITRE ATLAS</span>
+                    <span class="tag">LLM-as-Judge</span>
+                    <span class="tag">Safeguards</span>
+                    <span class="tag">Harm Classification</span>
+                </div>
+                <a href="https://github.com/cybergemchick/ai-abuse-classifier"
+                   class="find-link" target="_blank">VIEW ON GITHUB &rarr;</a>
+            </div>
+
+            <div class="finding-id">FIND-009</div>
         <div class="finding-sev sev-high">IN PROGRESS</div>
       </div>
       <div class="finding-title">Agentic AI Trust Boundary Analysis</div>
