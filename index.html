@@ -204,6 +204,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:
 .findings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:1.25rem}
 @media(max-width:700px){.findings-grid{grid-template-columns:1fr}}
 .finding.featured{grid-column:1/-1}
+.sub-head{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:2.5rem 0 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08)}
+.finding[id]{scroll-margin-top:5rem}
+.km-link{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px;color:inherit}
+.km-link:hover .km-highlight{color:var(--red)}
+.km-note{font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-top:1rem}
 .finding-stack{margin-bottom:1rem}
 .stack-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:.4rem}
 .stack-items{display:flex;flex-wrap:wrap;gap:.35rem}
@@ -389,7 +394,7 @@ body::before{
     <div class="recon-block" data-label="Current Status">
       <ul>
         <li><span class="pulse"></span>Completing AI Red Team certification</li>
-        <li><span class="pulse"></span>CASP+ &amp; CEH certified (DoD 8570/8140 compliant)</li>
+        <li><span class="pulse"></span>CASP+ &amp; CEH certified</li>
         <li><span class="pulse"></span>CompTIA SecAI+ certified (CY0-001)</li>
         <li><span class="pulse"></span>Active lab work in adversarial prompting</li>
         <li><span class="pulse"></span>Open to AI security roles</li>
@@ -496,7 +501,7 @@ body::before{
   </div>
 
   <!-- FIND-001: Featured -->
-  <div class="finding featured">
+  <div class="finding featured" id="find-001">
     <div class="finding-meta">
       <div class="finding-id">FIND-001</div>
       <div class="finding-sev sev-critical">CRITICAL SURFACE</div>
@@ -521,7 +526,7 @@ body::before{
   <!-- 2-column grid -->
   <div class="findings-grid">
 
-    <div class="finding">
+    <div class="finding" id="find-002">
       <div class="finding-meta">
         <div class="finding-id">FIND-002</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -536,7 +541,7 @@ body::before{
       <div class="finding-tags"><span class="tag">OWASP LLM Top 10</span><span class="tag">MITRE ATLAS</span><span class="tag">Defensive Tooling</span></div>
     </div>
 
-    <div class="finding">
+    <div class="finding" id="find-003">
       <div class="finding-meta">
         <div class="finding-id">FIND-003</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -551,37 +556,7 @@ body::before{
       <div class="finding-tags"><span class="tag">LLM01</span><span class="tag">Security Training</span><span class="tag">CTF</span></div>
     </div>
 
-    <div class="finding">
-      <div class="finding-meta">
-        <div class="finding-id">FIND-004</div>
-        <div class="finding-sev sev-active">COMPLETE</div>
-        <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Jupyter · PyTorch</div>
-      </div>
-      <div class="finding-title"><a href="https://github.com/cybergemchick/adversarial-vision" target="_blank">Adversarial Vision Attacks</a></div>
-      <div class="finding-desc">FGSM and PGD adversarial attacks on ResNet-50 image classifiers, plus visual prompt injection for multimodal LLMs. Visualizes perturbations and maps techniques to MITRE ATLAS AML.T0043 (Craft Adversarial Data).</div>
-      <div class="finding-stack">
-        <div class="stack-label">Stack</div>
-        <div class="stack-items"><span class="stack-item">PyTorch</span><span class="stack-item">Torchvision</span><span class="stack-item">PIL</span><span class="stack-item">Matplotlib</span></div>
-      </div>
-      <div class="finding-tags"><span class="tag">AML.T0043</span><span class="tag">FGSM / PGD</span><span class="tag">Visual Injection</span></div>
-    </div>
-
-    <div class="finding">
-      <div class="finding-meta">
-        <div class="finding-id">FIND-005</div>
-        <div class="finding-sev sev-active">COMPLETE</div>
-        <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Jupyter · HuggingFace</div>
-      </div>
-      <div class="finding-title"><a href="https://github.com/cybergemchick/ai-bias-audit" target="_blank">AI Bias Audit Notebook</a></div>
-      <div class="finding-desc">Demographic fairness audit of a public NLP sentiment model. Counterfactual testing across gender, race, religion, and age groups using ANOVA, eta-squared effect size, and profession × gender association heatmaps.</div>
-      <div class="finding-stack">
-        <div class="stack-label">Stack</div>
-        <div class="stack-items"><span class="stack-item">Transformers</span><span class="stack-item">SHAP</span><span class="stack-item">Fairlearn</span><span class="stack-item">SciPy</span></div>
-      </div>
-      <div class="finding-tags"><span class="tag">AML.T0048</span><span class="tag">Fairness</span><span class="tag">NIST AI RMF</span></div>
-    </div>
-
-    <div class="finding">
+    <div class="finding" id="find-006" style="grid-column:1/-1">
       <div class="finding-meta">
         <div class="finding-id">FIND-006</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -596,7 +571,41 @@ body::before{
       <div class="finding-tags"><span class="tag">Threat Intelligence</span><span class="tag">ATLAS Mapped</span><span class="tag">27 Incidents</span></div>
     </div>
 
-    <div class="finding">
+  </div><!-- /flagship -->
+
+  <div class="sub-head">Additional research and tools</div>
+  <div class="findings-grid">
+    <div class="finding" id="find-004">
+      <div class="finding-meta">
+        <div class="finding-id">FIND-004</div>
+        <div class="finding-sev sev-active">COMPLETE</div>
+        <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Jupyter · PyTorch</div>
+      </div>
+      <div class="finding-title"><a href="https://github.com/cybergemchick/adversarial-vision" target="_blank">Adversarial Vision Attacks</a></div>
+      <div class="finding-desc">FGSM and PGD adversarial attacks on ResNet-50 image classifiers, plus visual prompt injection for multimodal LLMs. Visualizes perturbations and maps techniques to MITRE ATLAS AML.T0043 (Craft Adversarial Data).</div>
+      <div class="finding-stack">
+        <div class="stack-label">Stack</div>
+        <div class="stack-items"><span class="stack-item">PyTorch</span><span class="stack-item">Torchvision</span><span class="stack-item">PIL</span><span class="stack-item">Matplotlib</span></div>
+      </div>
+      <div class="finding-tags"><span class="tag">AML.T0043</span><span class="tag">FGSM / PGD</span><span class="tag">Visual Injection</span></div>
+    </div>
+
+    <div class="finding" id="find-005">
+      <div class="finding-meta">
+        <div class="finding-id">FIND-005</div>
+        <div class="finding-sev sev-active">COMPLETE</div>
+        <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Jupyter · HuggingFace</div>
+      </div>
+      <div class="finding-title"><a href="https://github.com/cybergemchick/ai-bias-audit" target="_blank">AI Bias Audit Notebook</a></div>
+      <div class="finding-desc">Demographic fairness audit of a public NLP sentiment model. Counterfactual testing across gender, race, religion, and age groups using ANOVA, eta-squared effect size, and profession × gender association heatmaps.</div>
+      <div class="finding-stack">
+        <div class="stack-label">Stack</div>
+        <div class="stack-items"><span class="stack-item">Transformers</span><span class="stack-item">SHAP</span><span class="stack-item">Fairlearn</span><span class="stack-item">SciPy</span></div>
+      </div>
+      <div class="finding-tags"><span class="tag">AML.T0048</span><span class="tag">Fairness</span><span class="tag">NIST AI RMF</span></div>
+    </div>
+
+    <div class="finding" id="find-007">
       <div class="finding-meta">
         <div class="finding-id">FIND-007</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -611,7 +620,7 @@ body::before{
       <div class="finding-tags"><span class="tag">Prompt Injection</span><span class="tag">Defense Analysis</span><span class="tag">CTF Research</span></div>
     </div>
 
-    <div class="finding">
+    <div class="finding" id="find-008">
       <div class="finding-meta">
         <div class="finding-id">FIND-008</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -626,7 +635,7 @@ body::before{
       <div class="finding-tags"><span class="tag">Professional Deliverable</span><span class="tag">Engagement Reporting</span></div>
     </div>
 
-    <div class="finding">
+    <div class="finding" id="find-009">
       <div class="finding-meta">
         <div class="finding-id">FIND-009</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -641,7 +650,7 @@ body::before{
       <div class="finding-tags"><span class="tag">LLM-as-Judge</span><span class="tag">Safeguards</span><span class="tag">Harm Classification</span></div>
     </div>
 
-    <div class="finding">
+    <div class="finding" id="find-010">
       <div class="finding-meta">
         <div class="finding-id">FIND-010</div>
         <div class="finding-sev sev-high">IN PROGRESS</div>
@@ -656,6 +665,7 @@ body::before{
       <div class="progress-label">30%: threat modeling and initial lab setup</div>
     </div>
 
+
   </div><!-- /findings-grid -->
 </section>
 
@@ -668,32 +678,33 @@ body::before{
       <div class="phase-desc">How the attack surface is mapped and traversed.</div>
     </div>
   </div>
-  <div class="killchain-map" role="img" aria-label="AI attack surface tree">
+  <div class="killchain-map" role="group" aria-label="AI attack surface tree. Underlined items link to a related project below.">
 <span class="km-root">AI_ATTACK_SURFACE/</span>
 ├── <span class="km-branch">INPUT_LAYER/</span>
-│   ├── <span class="km-highlight">Prompt Injection</span> <span class="km-leaf">← direct, indirect, multi-turn</span>
-│   ├── <span class="km-highlight">Jailbreak Research</span> <span class="km-leaf">← role-play, prefix, token manipulation</span>
-│   ├── <span class="km-highlight">Adversarial Inputs</span> <span class="km-leaf">← text, image, audio perturbations</span>
+│   ├── <a class="km-link" href="#find-003"><span class="km-highlight">Prompt Injection</span></a> <span class="km-leaf">← direct, indirect, multi-turn</span>
+│   ├── <a class="km-link" href="#find-007"><span class="km-highlight">Jailbreak Research</span></a> <span class="km-leaf">← role-play, prefix, token manipulation</span>
+│   ├── <a class="km-link" href="#find-004"><span class="km-highlight">Adversarial Inputs</span></a> <span class="km-leaf">← text, image, audio perturbations</span>
 │   └── <span class="km-highlight">Context Window Abuse</span> <span class="km-leaf">← flooding, distraction, injection via retrieval</span>
 │
 ├── <span class="km-branch">MODEL_LAYER/</span>
-│   ├── <span class="km-highlight">Model Extraction</span> <span class="km-leaf">← query-based reconstruction</span>
+│   ├── <a class="km-link" href="#find-006"><span class="km-highlight">Model Extraction</span></a> <span class="km-leaf">← query-based reconstruction</span>
 │   ├── <span class="km-highlight">Membership Inference</span> <span class="km-leaf">← training data exposure</span>
 │   ├── <span class="km-highlight">Training Poisoning</span> <span class="km-leaf">← supply chain, fine-tune attacks</span>
 │   └── <span class="km-highlight">Backdoor Injection</span> <span class="km-leaf">← trojan triggers, behavioral implants</span>
 │
 ├── <span class="km-branch">OUTPUT_LAYER/</span>
-│   ├── <span class="km-highlight">Harmful Generation</span> <span class="km-leaf">← policy bypass, misuse via refusal evasion</span>
-│   ├── <span class="km-highlight">Hallucination Exploit</span> <span class="km-leaf">← confidence manipulation, false grounding</span>
-│   ├── <span class="km-highlight">Data Exfiltration</span> <span class="km-leaf">← PII leakage, system context extraction</span>
-│   └── <span class="km-highlight">Bias Exploitation</span> <span class="km-leaf">← fairness violations, discriminatory outputs</span>
+│   ├── <a class="km-link" href="#find-009"><span class="km-highlight">Harmful Generation</span></a> <span class="km-leaf">← policy bypass, misuse via refusal evasion</span>
+│   ├── <a class="km-link" href="#find-002"><span class="km-highlight">Hallucination Exploit</span></a> <span class="km-leaf">← confidence manipulation, false grounding</span>
+│   ├── <a class="km-link" href="#find-002"><span class="km-highlight">Data Exfiltration</span></a> <span class="km-leaf">← PII leakage, system context extraction</span>
+│   └── <a class="km-link" href="#find-005"><span class="km-highlight">Bias Exploitation</span></a> <span class="km-leaf">← fairness violations, discriminatory outputs</span>
 │
 └── <span class="km-branch">AGENTIC_LAYER/</span>
-    ├── <span class="km-highlight">Tool Use Exploitation</span> <span class="km-leaf">← code exec, file write, API abuse</span>
-    ├── <span class="km-highlight">Multi-Agent Trust</span> <span class="km-leaf">← prompt laundering across agent hops</span>
+    ├── <a class="km-link" href="#find-002"><span class="km-highlight">Tool Use Exploitation</span></a> <span class="km-leaf">← code exec, file write, API abuse</span>
+    ├── <a class="km-link" href="#find-010"><span class="km-highlight">Multi-Agent Trust</span></a> <span class="km-leaf">← prompt laundering across agent hops</span>
     ├── <span class="km-highlight">RAG Poisoning</span> <span class="km-leaf">← document injection, retrieval manipulation</span>
-    └── <span class="km-highlight">Autonomous Pathfinding</span> <span class="km-leaf">← goal hijacking in long-horizon agents</span>
+    └── <a class="km-link" href="#find-010"><span class="km-highlight">Autonomous Pathfinding</span></a> <span class="km-leaf">← goal hijacking in long-horizon agents</span>
   </div>
+  <div class="km-note">Underlined items link to a related project in Findings &amp; Operations. Model Extraction links to the incident tracker, which documents it rather than performs it.</div>
 </section>
 
 <!-- TA0005: IMPACT (Currently) -->
@@ -746,8 +757,8 @@ body::before{
   <div class="exfil-inner">
     <div>
       <div class="exfil-tag">TA0006 · Exfiltration</div>
-      <h2 class="exfil-title">Request a Briefing</h2>
-      <p class="exfil-sub">Looking to build or strengthen an AI red team? Evaluating LLM deployments for safety and security? Let's talk. I'm actively seeking roles in AI security research, safety evaluation, and adversarial ML.</p>
+      <h2 class="exfil-title">Bring me an AI system. I'll show you how I'd attack it.</h2>
+      <p class="exfil-sub">I'm interested in AI red-team, model-security, and safety-evaluation roles. In an interview I'm happy to walk through an attack scenario, a threat model, or any of the projects above.</p>
     </div>
     <div class="exfil-links">
       <a href="https://github.com/cybergemchick" target="_blank" class="exfil-link">
