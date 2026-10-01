@@ -504,33 +504,10 @@ body::before{
     </div>
   </div>
 
-  <!-- FIND-001: Featured -->
-  <div class="finding featured" id="find-001">
-    <div class="finding-meta">
-      <div class="finding-id">FIND-001</div>
-      <div class="finding-sev sev-critical">CRITICAL SURFACE</div>
-      <div class="finding-sev sev-active">ACTIVE</div>
-      <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Python · Open Source</div>
-    </div>
-    <div class="finding-title">
-      <a href="https://github.com/cybergemchick/AIethicsthreatmodel" target="_blank">AI Ethics &amp; Security Dashboard</a>
-    </div>
-    <div class="finding-desc">End-to-end AI red team platform integrating MITRE ATLAS threat modeling, STRIDE analysis, and real-time ML model monitoring. Covers the full adversarial lifecycle: threat identification, fairness auditing, model explainability, EU AI Act compliance, CI/CD pipeline hardening, and live incident logging with email and Slack alerting.</div>
-    <div class="finding-stack">
-      <div class="stack-label">Stack</div>
-      <div class="stack-items">
-        <span class="stack-item">Python</span><span class="stack-item">PyTorch</span><span class="stack-item">SHAP</span><span class="stack-item">Scikit-learn</span><span class="stack-item">GitHub Actions</span>
-      </div>
-    </div>
-    <div class="finding-tags">
-      <span class="tag">MITRE ATLAS</span><span class="tag">STRIDE</span><span class="tag">Bias Auditing</span><span class="tag">EU AI Act</span><span class="tag">XAI / SHAP</span><span class="tag">CI/CD Security</span>
-    </div>
-  </div>
-
   <!-- 2-column grid -->
   <div class="findings-grid">
 
-    <div class="finding" id="find-002">
+    <div class="finding featured" id="find-002">
       <div class="finding-meta">
         <div class="finding-id">FIND-002</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -560,7 +537,7 @@ body::before{
       <div class="finding-tags"><span class="tag">LLM01</span><span class="tag">Security Training</span><span class="tag">CTF</span></div>
     </div>
 
-    <div class="finding" id="find-006" style="grid-column:1/-1">
+    <div class="finding" id="find-006">
       <div class="finding-meta">
         <div class="finding-id">FIND-006</div>
         <div class="finding-sev sev-active">COMPLETE</div>
@@ -579,6 +556,21 @@ body::before{
 
   <div class="sub-head">Additional research and tools</div>
   <div class="findings-grid">
+    <div class="finding" id="find-001">
+      <div class="finding-meta">
+        <div class="finding-id">FIND-001</div>
+        <div class="finding-sev sev-research">PROTOTYPE</div>
+        <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Python · Streamlit</div>
+      </div>
+      <div class="finding-title"><a href="https://github.com/cybergemchick/AIethicsthreatmodel" target="_blank">AI Ethics &amp; Security Dashboard</a></div>
+      <div class="finding-desc">Early-stage Streamlit reference page with STRIDE categories, a secure ML lifecycle checklist, CI/CD security practices and a high-level EU AI Act checklist. It is static: it does not monitor models or send alerts. Fairness and explainability sections are marked as planned.</div>
+      <div class="finding-stack">
+        <div class="stack-label">Stack</div>
+        <div class="stack-items"><span class="stack-item">Python</span><span class="stack-item">Streamlit</span><span class="stack-item">pytest</span></div>
+      </div>
+      <div class="finding-tags"><span class="tag">STRIDE</span><span class="tag">Checklists</span><span class="tag">EU AI Act</span></div>
+    </div>
+
     <div class="finding" id="find-004">
       <div class="finding-meta">
         <div class="finding-id">FIND-004</div>
