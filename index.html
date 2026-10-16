@@ -365,10 +365,6 @@ body::before{
       <div class="stat-num">5</div>
       <div class="stat-label">CTF Levels Built</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num">7</div>
-      <div class="stat-label">Gandalf Levels Solved</div>
-    </div>
   </div>
 </section>
 
@@ -601,21 +597,6 @@ body::before{
       <div class="finding-tags"><span class="tag">AML.T0048</span><span class="tag">Fairness</span><span class="tag">NIST AI RMF</span></div>
     </div>
 
-    <div class="finding" id="find-007">
-      <div class="finding-meta">
-        <div class="finding-id">FIND-007</div>
-        <div class="finding-sev sev-active">COMPLETE</div>
-        <div style="font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-left:auto">Research · Writeup</div>
-      </div>
-      <div class="finding-title"><a href="https://github.com/cybergemchick/ctf-writeups" target="_blank">CTF Analysis: Lakera Gandalf</a></div>
-      <div class="finding-desc">Full walkthrough of all 7 levels of Lakera's Gandalf LLM CTF. Each level analyzes the defense mechanism, the extraction technique used, and production deployment implications. Mapped to OWASP LLM01 and ATLAS AML.T0051.</div>
-      <div class="finding-stack">
-        <div class="stack-label">Coverage</div>
-        <div class="stack-items"><span class="stack-item">7 Levels</span><span class="stack-item">LLM01</span><span class="stack-item">AML.T0051</span></div>
-      </div>
-      <div class="finding-tags"><span class="tag">Prompt Injection</span><span class="tag">Defense Analysis</span><span class="tag">CTF Research</span></div>
-    </div>
-
     <div class="finding" id="find-008">
       <div class="finding-meta">
         <div class="finding-id">FIND-008</div>
@@ -678,7 +659,7 @@ body::before{
 <span class="km-root">AI_ATTACK_SURFACE/</span>
 ├── <span class="km-branch">INPUT_LAYER/</span>
 │   ├── <a class="km-link" href="#find-003"><span class="km-highlight">Prompt Injection</span></a> <span class="km-leaf">← direct, indirect, multi-turn</span>
-│   ├── <a class="km-link" href="#find-007"><span class="km-highlight">Jailbreak Research</span></a> <span class="km-leaf">← role-play, prefix, token manipulation</span>
+│   ├── <span class="km-highlight">Jailbreak Research</span> <span class="km-leaf">← role-play, prefix, token manipulation</span>
 │   ├── <a class="km-link" href="#find-004"><span class="km-highlight">Adversarial Inputs</span></a> <span class="km-leaf">← text, image, audio perturbations</span>
 │   └── <span class="km-highlight">Context Window Abuse</span> <span class="km-leaf">← flooding, distraction, injection via retrieval</span>
 │
